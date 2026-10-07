@@ -146,6 +146,18 @@ O notebook também pode ser aberto e executado pelo **Google Colab** ou Jupyter 
 
 ---
 
-# Autores
 
-Adicione aqui os integrantes do grupo, RMs e respectivos perfis do GitHub.
+- Augusto Valerio - RM:562185  
+  GitHub: https://github.com/Augusto-Valerio
+
+- Jonas Esteves França - RM:564143  
+  GitHub: https://github.com/Jonas-Franca
+
+- Mariana Silva Oliveira - RM:564241  
+  GitHub: https://github.com/Marirsil
+
+- Pedro Marchese - RM:563339  
+  GitHub: https://github.com/PedroMarchese01
+
+- Vitor Rodrigues Tigre - RM:561746  
+  GitHub: https://github.com/VitorTigre
