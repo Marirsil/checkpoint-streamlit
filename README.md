@@ -1,41 +1,151 @@
-# Checkpoint — Previsão de Churn com Streamlit
+# Previsão de Churn de Clientes
 
-Aplicação desenvolvida para o Checkpoint de Machine Learning.
+Projeto desenvolvido para um **Checkpoint de Machine Learning - FIAP**.
 
-## Objetivo
+O objetivo é utilizar técnicas de **classificação supervisionada** para analisar características de clientes de telecomunicações e desenvolver um modelo capaz de estimar a probabilidade de **churn**, ou seja, cancelamento do serviço.
 
-Prever a probabilidade de **churn** de clientes de telecomunicações a partir do conjunto de dados Telco Customer Churn.
+---
 
-## Modelo
+# Links
 
-O modelo selecionado no notebook foi:
+**Repositório:**  
+[GitHub](https://github.com/Marirsil/checkpoint-streamlit)
 
-- **XGBoost**
-- Estratégia de ajuste: **Grid Search**
-- `learning_rate = 0.03`
-- `max_depth = 3`
-- `n_estimators = 300`
-- Métrica principal: **ROC-AUC**
+**Aplicação Streamlit:**  
+Adicione aqui o link após a publicação no Streamlit Community Cloud.
 
-A aplicação reproduz o mesmo pré-processamento e a mesma divisão treino/teste utilizada no notebook, com `random_state=42`.
+---
 
-## Executar localmente
+# Tecnologias Utilizadas
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40px" height="40px" alt="Python" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="40px" height="40px" alt="Pandas" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="40px" height="40px" alt="NumPy" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" width="40px" height="40px" alt="Scikit-learn" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" width="40px" height="40px" alt="Google Colab / Jupyter" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40px" height="40px" alt="Git" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40px" height="40px" alt="GitHub" />
+</div>
+
+---
+
+# Base de Dados
+
+Foi utilizada a base **Telco Customer Churn**, disponibilizada publicamente pela IBM.
+
+A variável resposta utilizada no projeto é:
+
+- `Churn` — indica se o cliente cancelou ou não o serviço.
+
+Entre as principais variáveis utilizadas para previsão estão:
+
+- Gênero
+- Indicador de cliente idoso
+- Parceiro(a)
+- Dependentes
+- Tempo como cliente (`tenure`)
+- Serviço de telefone
+- Serviço de internet
+- Segurança online
+- Backup online
+- Proteção do dispositivo
+- Suporte técnico
+- Streaming de TV
+- Streaming de filmes
+- Tipo de contrato
+- Fatura digital
+- Forma de pagamento
+- Cobrança mensal
+- Cobrança total
+
+---
+
+# Modelo
+
+Foram comparados diferentes modelos de classificação no notebook.
+
+O modelo final selecionado foi o **XGBoost ajustado por Grid Search**.
+
+Principais hiperparâmetros:
+
+| Parâmetro | Valor |
+|---|---:|
+| learning_rate | 0.03 |
+| max_depth | 3 |
+| n_estimators | 300 |
+
+A métrica principal utilizada para comparação dos modelos foi o **ROC-AUC**.
+
+---
+
+# Aplicação Streamlit
+
+Foi desenvolvida uma aplicação em **Streamlit** que permite:
+
+- Visualizar informações da base tratada
+- Visualizar estatísticas descritivas
+- Visualizar gráficos exploratórios
+- Consultar as métricas do modelo final
+- Visualizar a matriz de confusão
+- Informar características de um cliente
+- Gerar uma previsão de churn
+- Consultar a probabilidade estimada de cancelamento
+
+---
+
+# Estrutura do Projeto
+
+```text
+checkpoint-streamlit/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+└── notebook.ipynb
+```
+
+---
+
+# Como Executar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Marirsil/checkpoint-streamlit.git
+```
+
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Execute a aplicação:
+
+```bash
 streamlit run app.py
 ```
 
-## Arquivos principais
+O notebook também pode ser aberto e executado pelo **Google Colab** ou Jupyter Notebook.
 
-- `app.py`: aplicação Streamlit.
-- `requirements.txt`: dependências.
-- Notebook do Checkpoint: contém EDA, comparação dos modelos, Grid Search, Optuna e seleção do modelo final.
+---
 
-## Base de dados
+# Limitações
 
-Telco Customer Churn, disponibilizada publicamente pela IBM.
+- O modelo foi treinado a partir de uma base histórica de clientes.
+- A previsão representa uma probabilidade estatística e não uma certeza de cancelamento.
+- Mudanças no comportamento dos clientes ao longo do tempo podem afetar o desempenho do modelo.
+- Clientes com combinações de características pouco representadas na base podem apresentar previsões menos confiáveis.
 
-## Uso
+---
 
-Preencha os dados de um cliente e clique em **Calcular risco de churn**. O app exibirá a probabilidade estimada de cancelamento e a classificação com limiar de 50%.
+# Autores
+
+Adicione aqui os integrantes do grupo, RMs e respectivos perfis do GitHub.
