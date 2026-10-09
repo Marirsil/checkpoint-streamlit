@@ -12,7 +12,7 @@ O objetivo é utilizar técnicas de **classificação supervisionada** para anal
 [GitHub](https://github.com/Marirsil/checkpoint-streamlit)
 
 **Aplicação Streamlit:**  
-Adicione aqui o link após a publicação no Streamlit Community Cloud.
+[Streamlit Community Cloud.](https://checkpoint-app-fngrswkcf2skwnhfxrnvqw.streamlit.app)
 
 ---
 
